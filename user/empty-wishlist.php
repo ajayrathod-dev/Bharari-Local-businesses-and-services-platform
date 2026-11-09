@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="zomo" />
+  <meta name="keywords" content="zomo" />
+  <meta name="author" content="zomo" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon" />
+  <title>zomo App</title>
+  <link rel="apple-touch-icon" href="../assets/images/logo/favicon.png" />
+  <meta name="theme-color" content="#0b53bf" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="zomo" />
+  <meta name="msapplication-TileImage" content="../assets/images/logo/favicon.png" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- font link -->
+  <link rel="stylesheet" href="../assets/css/vendors/metropolis.min.css" />
+
+  <!-- remixicon css -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/vendors/remixicon.css" />
+
+  <!-- bootstrap css -->
+  <link rel="stylesheet" id="rtl-link" type="text/css" href="../assets/css/vendors/bootstrap.min.css" />
+
+  <!-- Theme css -->
+  <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <!-- header start -->
+  <header class="section-t-space">
+    <div class="custom-container">
+      <div class="header-panel">
+        <a href="food-home.php">
+          <i class="ri-arrow-left-s-line"></i>
+        </a>
+        <h2>Empty-Wishlist</h2>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+
+  <!-- Notification start -->
+  <section class="section-b-space pt-0">
+    <div class="custom-container">
+      <div class="empty-tab">
+        <img class="img-fluid empty-cart w-100" src="../assets/images/empty-wishlist.svg" alt="empty-wishlist" />
+
+        <h2>Your Wishlist is Empty!!</h2>
+        <h5 class="mt-3">Please add your address for your better experience</h5>
+
+        <a href="food-home.php" class="btn theme-btn w-100 mt-5" role="button">Back to Home</a>
+      </div>
+    </div>
+  </section>
+  <!-- Notification end -->
+
+  <!-- bootstrap js -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- script js -->
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

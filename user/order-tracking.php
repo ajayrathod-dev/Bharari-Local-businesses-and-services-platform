@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bharari" />
+    <meta name="keywords" content="Bharari" />
+    <meta name="author" content="Bharari" />
+    <link rel="manifest" href="../manifest.json" />
+
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <title>Bharari App</title>
+    <link rel="apple-touch-icon" href="logo.png" />
+    <meta name="theme-color" content="#0b53bf" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Bharari" />
+    <meta name="msapplication-TileImage" content="logo.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- font link -->
+    <link rel="stylesheet" href="../assets/css/vendors/metropolis.min.css" />
+
+    <!-- remixicon css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/remixicon.css" />
+
+    <!-- swiper css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/swiper-bundle.min.css" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" id="rtl-link" type="text/css" href="../assets/css/vendors/bootstrap.min.css" />
+
+    <!-- Theme css -->
+    <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css" />
+</head>
+
+<body>
+  <!-- location map start -->
+  <div class="delivery-root">
+    <div class="map" id="map"></div>
+  </div>
+  <!-- location map end -->
+
+  <!-- tracking popup start -->
+  <div class="tracking-product">
+    <div class="tracking-head">
+      <img class="img-fluid profile-pic" src="../assets/images/icons/pro1.png" alt="pro1" />
+      <div>
+        <h5>Guy Hawkins</h5>
+        <h6>Courier Boy</h6>
+      </div>
+      <div class="content-option">
+        <a href="chatting.php">
+          <img class="img-fluid message-icon" src="../assets/images/svg/message.svg" alt="message" />
+        </a>
+        <a href="#">
+          <img class="img-fluid call-icon" src="../assets/images/svg/call.svg" alt="call" />
+        </a>
+      </div>
+    </div>
+    <div class="tracking-body">
+      <ul class="tracking-place">
+        <li class="active">
+          <span></span>
+          <div class="d-flex justify-content-between theme-color w-100">
+            <h6>Order confirmed</h6>
+            <h6>12 : 30 PM</h6>
+          </div>
+        </li>
+        <li>
+          <span></span>
+          <div class="d-flex justify-content-between light-text w-100">
+            <h6>Preparing Food</h6>
+            <h6>12 : 45 PM</h6>
+          </div>
+        </li>
+        <li>
+          <span></span>
+          <div class="d-flex justify-content-between light-text w-100">
+            <h6>Food on the way</h6>
+            <h6>12 : 58 PM</h6>
+          </div>
+        </li>
+        <li class="p-0">
+          <span></span>
+          <div class="d-flex justify-content-between light-text w-100">
+            <h6>Delivery to you</h6>
+            <h6>13 : 15 PM</h6>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a href="order-details.php" class="btn theme-btn delivery-btn mt-4 w-100">Order View Details</a>
+  </div>
+  <!-- tracking popup end -->
+
+  <!-- bootstrap js -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGCQvcXUsXwCdYArPXo72dLZ31WS3WQRw"></script>
+  <script src="../assets/js/route-map.js"></script>
+
+  <!-- script js -->
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

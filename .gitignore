@@ -1,0 +1,44 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*firebase-adminsdk*.json
+*-adminsdk-*.json
+!*firebase-adminsdk.sample.json
+*.pem
+*.key
+
+# Logs and error files
+*.log
+error_log
+*/error_log
+*/*/error_log
+*/*/*/error_log
+
+# OS & Temp Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+__MACOSX/
+*.tmp
+*.bak
+*.swp
+
+# Hosting & Web Server Junk
+.well-known/
+cgi-bin/
+sldfibwhoeuehgoskjh87t68768ygiygh.php
+
+# IDE & Editor Configs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories (if used)
+/vendor/
+/node_modules/

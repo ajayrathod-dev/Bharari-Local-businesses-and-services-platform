@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FCM Web Push Demo</title>
+</head>
+<body>
+  <h2>FCM Push Notification Demo</h2>
+  <button id="enableNotifications">Enable Notifications</button>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-messaging.js";
+
+    // Step 1: Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCP0LuqfcMPPLSBCJt7A2dFKPej11hMA2c",
+      authDomain: "ordor-8449f.firebaseapp.com",
+      projectId: "ordor-8449f",
+      storageBucket: "ordor-8449f.firebasestorage.app",
+      messagingSenderId: "71722001317",
+      appId: "1:71722001317:web:9e41f3891ab00275f9fe4c",
+      measurementId: "G-SHH8BXY3WW"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const messaging = getMessaging(app);
+
+    // Step 2: Button click handler
+    document.getElementById('enableNotifications').addEventListener('click', async () => {
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission !== 'granted') {
+          alert('Notification permission denied');
+          return;
+        }
+
+        // Step 3: Register service worker manually
+        const registration = await navigator.serviceWorker.register('../../../firebase-messaging-sw.js');
+        console.log('Service Worker registered:', registration);
+
+        // Step 4: Get the token with service worker reference
+        const token = await getToken(messaging, {
+          vapidKey: 'BK9mNQ9AYuwlIQYnJp_96Sj8m1r2XsXRHny1W5XNWW_6yBiPyWXtnILsNjEJWvr8ybB5Z0GFIo09EjdUBoyk1c0',
+          serviceWorkerRegistration: registration
+        });
+
+        if (token) {
+          console.log('FCM Token:', token);
+          alert('Token received and sent to server!');
+          // Step 5: Send token to your backend
+          fetch('save_token.php?user_id=1&token=' + encodeURIComponent(token));
+        } else {
+          alert('No token received. Please retry.');
+        }
+      } catch (err) {
+        console.error('Error getting FCM token:', err);
+        alert('Error: ' + err.message);
+      }
+    });
+
+    // Step 6: Handle messages when user is on the page
+    onMessage(messaging, (payload) => {
+      console.log('Foreground Message Received:', payload);
+      const { title, body } = payload.notification;
+      alert(`🔔 ${title}\n${body}`);
+    });
+  </script>
+</body>
+</html>
